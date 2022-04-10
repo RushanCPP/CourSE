@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CourSE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_course">Перейти к курсу</string>
+    <string name="go_to_paragraph">Перейти к главе</string>
+</resources>
