@@ -25,12 +25,12 @@ public class ParagraphFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_paragraph, container, false);
-     //   ((TextView) view.findViewById(R.id.fragment_paragraph_paragraph_name)).setText(MainActivity.paragraph.getName());
-      //  ((TextView) view.findViewById(R.id.fragment_paragraph_paragraph_score))
-       //         .setText(String.format(Locale.getDefault(),
-         //       "%d/%d", MainActivity.paragraph.getScore(), MainActivity.paragraph.getMaxScore()));
-       // RecyclerView recyclerView = view.findViewById(R.id.fragment_paragraph_paragraph_lessons);
-       // recyclerView.setAdapter(null);
+        ((TextView) view.findViewById(R.id.fragment_paragraph_paragraph_name)).setText(MainActivity.paragraph.getName());
+        ((TextView) view.findViewById(R.id.fragment_paragraph_paragraph_score))
+                .setText(String.format(Locale.getDefault(),
+                "%d/%d", MainActivity.paragraph.getScore(), MainActivity.paragraph.getMaxScore()));
+        RecyclerView recyclerView = view.findViewById(R.id.fragment_paragraph_paragraph_lessons);
+        recyclerView.setAdapter(null);
         return view;
     }
 }

@@ -13,25 +13,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.course.MainActivity;
 import com.example.course.R;
-import com.example.course.course.Course;
 import com.example.course.course.paragraph.Paragraph;
+import com.example.course.course.paragraph.lesson.Lesson;
 
 import java.util.List;
-import java.util.Locale;
 
-public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
-    public List<Paragraph> paragraphs;
-
-    public CourseAdapter(List<Paragraph> paragraphList) {
-        paragraphs = paragraphList;
+public class ParagraphAdapter extends RecyclerView.Adapter<ParagraphAdapter.ViewHolder> {
+    public List<Lesson> lessons;
+    public ParagraphAdapter() {
+    }
+    public ParagraphAdapter(List<Lesson> lessonList) {
+        lessons = lessonList;
     }
 
-    public List<Paragraph> getParagraphs() {
-        return paragraphs;
+    public List<Lesson> getLessons() {
+        return lessons;
     }
 
-    public void setParagraphs(List<Paragraph> paragraphs) {
-        this.paragraphs = paragraphs;
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
         notifyDataSetChanged();
     }
 
@@ -39,21 +39,21 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_course_recycler_view_item, parent, false);
-        Toast.makeText(parent.getContext(), paragraphs.size() + "", Toast.LENGTH_LONG).show();
+                .inflate(R.layout.fragment_paragraph, parent, false);
+        Toast.makeText(parent.getContext(), lessons.size() + "", Toast.LENGTH_LONG).show();
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Paragraph paragraph = paragraphs.get(position);
-        holder.getNameTV().setText(paragraph.getName());
-        holder.getScoreTV().setText(String.format(Locale.getDefault(), "%d/%d", paragraph.getScore(), paragraph.getMaxScore()));
+        Lesson lesson = lessons.get(position);
+        holder.getNameTV().setText(lesson.getName());
+        holder.getScoreTV().setText(String.format("%d/%d", lesson.getScore(), lesson.getMaxScore()));
     }
 
     @Override
     public int getItemCount() {
-        return paragraphs.size();
+        return lessons.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -61,14 +61,14 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTV = itemView.findViewById(R.id.fragment_course_course_paragraph_name);
-            scoreTV = itemView.findViewById(R.id.fragment_course_course_paragraph_score);
-            Button goToButton = itemView.findViewById(R.id.fragment_course_course_paragraph_button);
+            nameTV = itemView.findViewById(R.id.fragment_paragraph_paragraph_name);
+            scoreTV = itemView.findViewById(R.id.fragment_paragraph_paragraph_score);
+            Button goToButton = itemView.findViewById(R.id.fragment_paragraph_go_to_lesson);
             goToButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int index = getAdapterPosition();
-                    MainActivity.paragraph = paragraphs.get(index);
+                    MainActivity.lesson = lessons.get(index);
                     Navigation.findNavController(view).navigate(R.id.action_courseFragment_to_paragraphFragment);
                 }
             });

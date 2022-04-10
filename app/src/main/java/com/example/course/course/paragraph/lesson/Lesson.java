@@ -2,6 +2,8 @@ package com.example.course.course.paragraph.lesson;
 
 import com.example.course.course.paragraph.lesson.task.Task;
 
+import java.util.List;
+
 public class Lesson {
     protected String name;
     protected Task task;

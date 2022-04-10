@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_course.xml" value="0.16304347826086957" />
-        <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_course_recycler_view_item.xml" value="0.1" />
+        <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_course_recycler_view_item.xml" value="0.22" />
         <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_courses.xml" value="0.1" />
         <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_courses_recycler_view_item.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_lesson.xml" value="0.1" />
         <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_paragraph.xml" value="0.1015625" />
+        <entry key="..\:/Users/rusha/AndroidStudioProjects/CourSE/app/src/main/res/layout/fragment_paragraph_recycler_view_item.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>
